@@ -2,9 +2,7 @@ import React from "react";
 import Article from "./Article";
 import Form from "./Form";
 
-const Main = (props) => {
-  const { articles } = props;
-
+const Main = ({ articles, newPostTitle, setNewPostTitle }) => {
   return (
     <div className="container">
       <div className="row">
@@ -14,7 +12,7 @@ const Main = (props) => {
           ))}
         </div>
         <div className="col-4">
-          <Form />
+          <Form newPostTitle={newPostTitle} setNewPostTitle={setNewPostTitle} />
         </div>
       </div>
     </div>
