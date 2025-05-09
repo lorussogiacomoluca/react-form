@@ -2,7 +2,7 @@ import React from "react";
 import Article from "./Article";
 import Form from "./Form";
 
-const Main = ({ articles, newPostTitle, setNewPostTitle }) => {
+const Main = ({ articles, posts, setPosts }) => {
   return (
     <div className="container">
       <div className="row">
@@ -12,7 +12,7 @@ const Main = ({ articles, newPostTitle, setNewPostTitle }) => {
           ))}
         </div>
         <div className="col-4">
-          <Form newPostTitle={newPostTitle} setNewPostTitle={setNewPostTitle} />
+          <Form posts={posts} setPosts={setPosts} />
         </div>
       </div>
     </div>

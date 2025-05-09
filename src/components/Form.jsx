@@ -1,14 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
-const Form = ({ newPostTitle, setNewPostTitle }) => {
+const Form = ({ posts, setPosts }) => {
+  const [newPostTitle, setNewPostTitle] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(newPostTitle);
+    const updatedPosts = [...posts, { titolo: newPostTitle }];
+    console.log(updatedPosts);
+    setPosts(updatedPosts);
+  };
   return (
     <>
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          console.log(`Il titolo e' ${newPostTitle}`);
-        }}
-      >
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="newArticleInput" className="form-label">
             Titolo nuovo articolo

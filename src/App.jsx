@@ -4,15 +4,12 @@ import Main from "./components/Main";
 import Articles from "./articoli";
 
 function App() {
+  const [posts, setPosts] = useState(Articles);
   const [newPostTitle, setNewPostTitle] = useState("");
   return (
     <>
       <Header />
-      <Main
-        articles={Articles}
-        newPostTitle={newPostTitle}
-        setNewPostTitle={setNewPostTitle}
-      />
+      <Main articles={posts} posts={posts} setPosts={setPosts} />
     </>
   );
 }
