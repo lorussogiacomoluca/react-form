@@ -8,7 +8,12 @@ const Main = ({ articles, posts, setPosts }) => {
       <div className="row">
         <div className="col-8">
           {articles.map((article, index) => (
-            <Article key={index} article={article} />
+            <Article
+              key={index}
+              article={article}
+              posts={posts}
+              setPosts={setPosts}
+            />
           ))}
         </div>
         <div className="col-4">
