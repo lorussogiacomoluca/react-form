@@ -2,7 +2,7 @@ import React from "react";
 
 const Article = ({ article }) => {
   return (
-    <div className="card">
+    <div className="card mb-4">
       <div className="card-body">
         <h5 className="card-title">{article.titolo}</h5>
         <h6 className="card-subtitle mb-2 text-body-secondary">

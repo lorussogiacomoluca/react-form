@@ -33,7 +33,7 @@ const Articles = [
   },
   {
     id: 5,
-    autore: "Andrea Gallo",
+    autore: "Andrea Giallo",
     titolo: "Il minimalismo nella vita moderna",
     contenuto:
       "Eliminare il superfluo per concentrarsi su ciò che conta davvero. Il minimalismo non è solo estetica, ma un approccio mentale e pratico.",
