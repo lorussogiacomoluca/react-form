@@ -4,10 +4,9 @@ const Form = ({ posts, setPosts }) => {
   const [newPostTitle, setNewPostTitle] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(newPostTitle);
     const updatedPosts = [...posts, { titolo: newPostTitle }];
-    console.log(updatedPosts);
     setPosts(updatedPosts);
+    setNewPostTitle("");
   };
   return (
     <>
@@ -17,7 +16,9 @@ const Form = ({ posts, setPosts }) => {
             Titolo nuovo articolo
           </label>
           <input
+            required
             type="text"
+            value={newPostTitle}
             className="form-control"
             id="newArticleInput"
             placeholder="Inserisci il titolo del nuovo articolo"
@@ -25,7 +26,6 @@ const Form = ({ posts, setPosts }) => {
               setNewPostTitle(e.target.value);
             }}
           />
-          {newPostTitle}
         </div>
         <div className="col-auto">
           <button type="submit" className="btn btn-primary mb-3">
