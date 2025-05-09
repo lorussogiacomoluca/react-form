@@ -1,4 +1,4 @@
-const articoli = [
+const Articles = [
   {
     id: 1,
     autore: "Luca Bianchi",
@@ -40,3 +40,5 @@ const articoli = [
     data: "2025-01-10",
   },
 ];
+
+export default Articles;

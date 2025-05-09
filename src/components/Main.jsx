@@ -1,9 +1,14 @@
 import React from "react";
+import Article from "./Article";
 
-const Main = () => {
+const Main = (props) => {
+  const { articles } = props;
+
   return (
-    <div>
-      <div className="container">h</div>
+    <div className="container">
+      {articles.map((article, index) => (
+        <Article key={index} article={article} />
+      ))}
     </div>
   );
 };
